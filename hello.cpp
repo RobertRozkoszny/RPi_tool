@@ -48,7 +48,6 @@ cout << "Content-Type: text/plain\r\n\r\n" << endl << endl ;
  
     // display the message
 
- 
  Json::Value fromScratch;
 while((msgrcv(msgid_odpowiedz, &message, sizeof(message), 1,IPC_NOWAIT ))!=(-1)){
 
@@ -61,15 +60,6 @@ for(i=0;i<8;i++){
 }	
 }
 Json::StyledWriter styledWriter;
-std::cout << styledWriter.write(fromScratch);
-
+std::cout << styledWriter.write(fromScratch)
     return 0;
 }
-
-
-
-
-	 
- 
-   
-	
